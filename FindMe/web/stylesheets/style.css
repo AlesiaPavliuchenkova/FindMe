@@ -1,0 +1,56 @@
+body {
+    background: url("/images/backgound.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 87.5%;
+    font-family: Arial;
+    text-align: left;
+}
+
+.mainHeader {
+    border: 1px solid black;
+    width: 100%;
+    heigth: 30%;
+    float: none;
+}
+
+.mainContent {
+    border:1px solid slategrey;
+    margin: 0 auto;
+    width: 50%;
+    float: left;
+    clear: both;
+    font-size: 30%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+
+}
+
+a:hover, a:active {
+
+}
+
+
+input{
+    width:196px;
+    border:1px solid #ccc;
+}
+input.radio{
+    width:20px;
+    border:1px solid #ccc;
+}
+input.submit{
+    border:1px solid #008B8B;
+}
+
+select{
+    width:196px;
+    border:1px solid #ccc;
+}

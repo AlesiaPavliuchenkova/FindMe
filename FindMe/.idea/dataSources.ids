@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - db@localhost" uuid="24ab3de2-a4c7-4a4b-b91c-ec70dc578730">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - db@localhost [2]" uuid="b659a2d7-e761-48d6-b83f-e8184a01322b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - db@localhost [3]" uuid="367a6d90-6f32-485e-af57-e5827d264d85">
+    <database-info product="MySQL" version="5.7.12-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="db">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="euro"/>
+      <schema id="3" name="information_schema"/>
+      <schema id="4" name="mysql"/>
+      <schema id="5" name="performance_schema"/>
+      <schema id="6" name="person"/>
+      <schema id="7" name="sakila"/>
+      <schema id="8" name="spider"/>
+      <schema id="9" name="sys"/>
+      <schema id="10" name="world"/>
+      <table id="11" parent="1" name="city"/>
+      <table id="12" parent="1" name="country"/>
+      <table id="13" parent="1" name="employee"/>
+      <table id="14" parent="1" name="euro2016"/>
+      <table id="15" parent="1" name="marks"/>
+      <table id="16" parent="1" name="person"/>
+      <table id="17" parent="1" name="student"/>
+      <routine id="18" parent="1" name="getRecord">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <column id="19" parent="11" name="city_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="20" parent="11" name="city_name">
+        <data-type>varchar(300)|0</data-type>
+      </column>
+      <column id="21" parent="11" name="country_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="22" parent="11" name="country_id">
+        <columns>country_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="23" parent="11" name="PRIMARY">
+        <columns>city_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="24" parent="11" name="city_ibfk_1">
+        <columns>country_id</columns>
+        <ref-key>~.country.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="25" parent="12" name="country_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="26" parent="12" name="country_name">
+        <data-type>varchar(300)|0</data-type>
+      </column>
+      <index id="27" parent="12" name="country_name">
+        <columns>country_name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="28" parent="12" name="PRIMARY">
+        <columns>country_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="29" parent="12" name="country_name">
+        <columns>country_name</columns>
+        <underlying-index>country_name</underlying-index>
+      </key>
+      <column id="30" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="31" parent="13" name="first_name">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="32" parent="13" name="last_name">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="33" parent="13" name="salary">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="34" parent="13" name="street_name">
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="35" parent="13" name="city_name">
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="36" parent="13" name="state_name">
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="37" parent="13" name="zipcode">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <key id="38" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="39" parent="14" name="name">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="40" parent="14" name="bio">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="41" parent="14" name="photoDone">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="42" parent="14" name="specialPlayer">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="43" parent="14" name="position">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="44" parent="14" name="number">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="45" parent="14" name="caps">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="46" parent="14" name="goalForCountry">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="47" parent="14" name="club">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="48" parent="14" name="league">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="49" parent="14" name="dateOfBirth">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="50" parent="14" name="someObject">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="51" parent="14" name="ratingMatch1">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="52" parent="14" name="ratingMatch2">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="53" parent="14" name="ratingMatch3">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="54" parent="14" name="playerFromFolder">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="55" parent="15" name="SID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="56" parent="15" name="MARKS">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="57" parent="15" name="YEAR">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="58" parent="15" name="sid__fk">
+        <columns>SID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <foreign-key id="59" parent="15" name="sid__fk">
+        <columns>SID</columns>
+        <ref-key>~.student.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>delete</cascade-delete-rule>
+      </foreign-key>
+      <column id="60" parent="16" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="61" parent="16" name="user_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="62" parent="16" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="63" parent="16" name="first_name">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="64" parent="16" name="last_name">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="65" parent="16" name="date_of_birth">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="66" parent="16" name="gender">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="67" parent="16" name="country_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="68" parent="16" name="city_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="69" parent="16" name="person_city_city_id_fk">
+        <columns>city_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="70" parent="16" name="person_country_country_id_fk">
+        <columns>country_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="71" parent="16" name="person_user_name_uindex">
+        <columns>user_name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="72" parent="16" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="73" parent="16" name="person_user_name_uindex">
+        <columns>user_name</columns>
+        <underlying-index>person_user_name_uindex</underlying-index>
+      </key>
+      <foreign-key id="74" parent="16" name="person_country_country_id_fk">
+        <columns>country_id</columns>
+        <ref-key>~.country.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="75" parent="16" name="person_city_city_id_fk">
+        <columns>city_id</columns>
+        <ref-key>~.city.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="76" parent="17" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="77" parent="17" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="78" parent="17" name="age">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="79" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <argument id="80" parent="18" name="in_id">
+        <direction>IN</direction>
+        <data-type>int(11)|0</data-type>
+      </argument>
+      <argument id="81" parent="18" name="out_name">
+        <direction>OUT</direction>
+        <data-type>varchar(20)|0</data-type>
+      </argument>
+      <argument id="82" parent="18" name="out_age">
+        <direction>OUT</direction>
+        <data-type>int(11)|0</data-type>
+      </argument>
+    </database-model>
+  </data-source>
+</component>

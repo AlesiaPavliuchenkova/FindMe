@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - db@localhost [3]">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="db">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="euro"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="person"/>
+    <schema id="8" parent="1" name="sakila"/>
+    <schema id="9" parent="1" name="spider"/>
+    <schema id="10" parent="1" name="sys"/>
+    <schema id="11" parent="1" name="world"/>
+    <table id="12" parent="2" name="city"/>
+    <table id="13" parent="2" name="country"/>
+    <table id="14" parent="2" name="employee"/>
+    <table id="15" parent="2" name="euro2016"/>
+    <table id="16" parent="2" name="marks"/>
+    <table id="17" parent="2" name="person"/>
+    <table id="18" parent="2" name="student"/>
+    <routine id="19" parent="2" name="getRecord">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="20" parent="12" name="city_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="12" name="city_name">
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="22" parent="12" name="country_id">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="23" parent="12" name="country_id">
+      <ColNames>country_id</ColNames>
+    </index>
+    <key id="24" parent="12" name="PRIMARY">
+      <ColNames>city_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="25" parent="12" name="city_ibfk_1">
+      <ColNames>country_id</ColNames>
+      <RefTableName>country</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>country_id</RefColNames>
+    </foreign-key>
+    <column id="26" parent="13" name="country_id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="13" name="country_name">
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <index id="28" parent="13" name="country_name">
+      <ColNames>country_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="13" name="PRIMARY">
+      <ColNames>country_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="30" parent="13" name="country_name">
+      <ColNames>country_name</ColNames>
+      <UnderlyingIndexName>country_name</UnderlyingIndexName>
+    </key>
+    <column id="31" parent="14" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="14" name="first_name">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="33" parent="14" name="last_name">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="34" parent="14" name="salary">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="35" parent="14" name="street_name">
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="36" parent="14" name="city_name">
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="37" parent="14" name="state_name">
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="38" parent="14" name="zipcode">
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="39" parent="14" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="15" name="name">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="41" parent="15" name="bio">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="42" parent="15" name="photoDone">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="43" parent="15" name="specialPlayer">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="44" parent="15" name="position">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="45" parent="15" name="number">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="46" parent="15" name="caps">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="47" parent="15" name="goalForCountry">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="48" parent="15" name="club">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="49" parent="15" name="league">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="50" parent="15" name="dateOfBirth">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="51" parent="15" name="someObject">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="52" parent="15" name="ratingMatch1">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="53" parent="15" name="ratingMatch2">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="54" parent="15" name="ratingMatch3">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="55" parent="15" name="playerFromFolder">
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="56" parent="16" name="SID">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="16" name="MARKS">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="16" name="YEAR">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="59" parent="16" name="sid__fk">
+      <ColNames>SID</ColNames>
+    </index>
+    <foreign-key id="60" parent="16" name="sid__fk">
+      <ColNames>SID</ColNames>
+      <RefTableName>student</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="61" parent="17" name="user_id">
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="17" name="password">
+      <DataType>char(15)|0</DataType>
+    </column>
+    <column id="63" parent="17" name="first_name">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="17" name="last_name">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="65" parent="17" name="country">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="66" parent="17" name="city">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="67" parent="17" name="PRIMARY">
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="68" parent="18" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="18" name="name">
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="18" name="age">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="71" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="72" parent="19" name="in_id">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="73" parent="19" name="out_name">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>varchar(20)|0</DataType>
+    </argument>
+    <argument id="74" parent="19" name="out_age">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int(11)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
